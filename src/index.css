@@ -1,0 +1,141 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  background-image: url('./assets/collage.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+
+}
+
+/* Estilos para la barra de navegación */
+.navbar1 {
+  background-color: #191a1b;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px; 
+}
+
+/* Brand */
+
+.brand {
+  margin-right: auto;
+}
+
+.brand h2 {
+  margin: 0;
+}
+
+.brand, .brand:hover, .brand:visited {
+  color: rgb(255, 255, 255);
+  text-decoration: none; 
+}
+
+/* Contenedor para los enlaces y la barra de búsqueda */
+.navigation-and-search {
+  display: flex;
+  align-items: center;
+}
+
+/* Enlaces */
+
+.nav-link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin-left: 20px; 
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Barra de busqueda*/
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border-radius: 5px; 
+  overflow: hidden;  
+  margin-left: 20px; 
+}
+
+.searchBar input[type='text'] {
+  border: none; 
+  padding: 5px 10px;
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px;
+}
+
+.searchBar button {
+  background-color: rgb(255, 255, 255); 
+  border: none; 
+  cursor: pointer;
+  padding: 5px 10px; 
+  border-top-right-radius: 5px; 
+  border-bottom-right-radius: 5px;
+}
+
+.searchBar button .fa-magnifying-glass {
+  color: black;
+}
+
+.searchBar button:hover {
+  background-color: #ddd; 
+}
+
+/* Tarjeta */
+
+.tarjeta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  background-color: #191a1b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 20%; 
+  max-width: 400px; 
+  height: auto; 
+  margin: 20px;
+  color: rgb(255, 255, 255);}
+
+.form h3 {
+  color: rgb(255, 255, 255); 
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 97%;
+  height: 100%;
+  border-radius: 10px;
+  border: none; 
+}
+
+.btn {
+  width: 100%; 
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #555;
+}
