@@ -1,16 +1,16 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { NavLink, Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { logout } from '../features/auth/authSlice'; 
+import { useSelector, useDispatch } from 'react-redux'
+import { NavLink, Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { logout } from '../features/auth/authSlice' 
 
 const NavBar = () => {
-  const { user } = useSelector((state) => state.auth);
-  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth)
+  const dispatch = useDispatch()
 
   const handleLogout = () => {
-    dispatch(logout());
-  };
+    dispatch(logout())
+  }
 
   return (
     <>
@@ -44,7 +44,7 @@ const NavBar = () => {
         </div>
       </header>
     </>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

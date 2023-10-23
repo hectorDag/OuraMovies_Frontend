@@ -139,3 +139,37 @@ body{
 .btn:hover {
   background-color: #555;
 }
+
+/* Estilos para HomePage.css */
+.home-page {
+  background-color: rgba(255, 255, 255, 0.623);
+  margin: 40px;
+  padding: 20px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap; /* Esto permite que las tarjetas se ajusten a la siguiente línea si no hay espacio suficiente */
+  gap: 20px; /* Añade un espacio entre las tarjetas */
+  justify-content: start; /* Alinea las tarjetas al inicio del contenedor */
+}
+
+/* Estilos para MovieCard.css */
+.movie-card {
+  background: rgb(255, 255, 255);
+  width: 200px; /* ajusta el ancho de la tarjeta */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Opcional: añade sombra para un efecto elevado */
+  text-align: center; /* Alinea el texto del título al centro */
+  padding: 5px;
+}
+
+.movie-image {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+  height: auto; /* Asegura que la imagen mantenga su aspecto */
+}
+
+.movie-title {
+  margin: 15px 0; /* Añade espacio alrededor del título */
+  font-size: 1.2em; /* Ajusta el tamaño del texto del título */
+  color: black; /* Color del texto */
+}
