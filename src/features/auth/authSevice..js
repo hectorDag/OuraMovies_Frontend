@@ -2,14 +2,12 @@ import axios from 'axios';
 
 const API_URL = 'https://ouramovie-api.onrender.com/api/users/'
 
-//registrar un usuario
 const register = async (userData) => {
     const response = await axios.post(API_URL, userData)
 
     return response.data
 }
 
-//login un usuario
 const login = async (userData) => {
     const response = await axios.post(API_URL + 'login', userData)
 
@@ -19,7 +17,6 @@ const login = async (userData) => {
     return response.data
 }
 
-//logout
 const logout = () => {
     localStorage.removeItem('user')
 }
