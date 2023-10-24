@@ -35,12 +35,6 @@ const NavBar = () => {
               </div>
             </>
           )}
-          <form className='searchBar'>
-            <input type='text' placeholder='Search' aria-label='Search'/>
-            <button type='submit'>
-              <FontAwesomeIcon icon={faMagnifyingGlass} /> 
-            </button>
-          </form>
         </div>
       </header>
     </>

@@ -1,30 +1,32 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Importa los estilos necesarios
-import MovieCard from '../components/MovieCard'; // Asegúrate de importar tu componente MovieCard
+import React, { useEffect, useState } from 'react'
+import MovieCard from '../components/MovieCard'
+import movieService from '../features/Movies/movieService' 
 
-const Home = ({ movies }) => {
-    // Asegúrate de que 'movies' es un array de objetos, cada uno representando una película
-    // Esto podría venir de un estado de React o ser pasado como prop
+const Home = () => {
+  const [movies, setMovies] = useState([])
+
+    useEffect(() => {
+        const fetchMovies = async () => {
+            try {
+                const movieList = await movieService.getMovies() 
+                setMovies(movieList)
+            } catch (error) {
+                console.error("An error occurred while fetching the movies: ", error)
+            }
+        }
+
+        fetchMovies()
+    }, [])
 
     return (
         <div className="home-page">
-            <Carousel
-                showArrows={true}
-                infiniteLoop={true}
-                showThumbs={false}
-                showStatus={false}
-                autoPlay={true}
-                interval={3000}
-            >
-                {movies.map((movie, index) => (
-                    <div key={index}>
-                        <MovieCard movie={movie} />  {/* Aquí asumimos que tu MovieCard puede aceptar 'movie' como prop */}
-                    </div>
+            <div className="movie-list">
+                {movies.map((movie) => (
+                    <MovieCard key={movie.id} movie={movie} />
                 ))}
-            </Carousel>
+            </div>
         </div>
-    );
-};
+    )
+}
+export default Home
 
-export default Home;
